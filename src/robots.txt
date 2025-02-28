@@ -1,0 +1,3 @@
+Sitemap: https://midweststakes.com/sitemap.xml
+User-agent: *
+Allow: /
