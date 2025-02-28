@@ -50,6 +50,10 @@
       }
     </script>
     <style>
+      * {
+        box-sizing: border-box;
+      }
+      
       body {
         font-family: "Fjalla One", sans-serif;
         margin: 0;
@@ -57,23 +61,31 @@
         background: black;
         line-height: 1.6;
       }
+      
       .container {
+        width: 100%;
         max-width: 800px;
         margin: 0 auto;
         padding: 0 20px;
       }
+      
       header {
         padding: 30px 0;
         text-align: center;
       }
+      
       form {
         margin: 20px auto;
         max-width: 600px;
+        width: 100%;
+        padding: 0;
       }
+      
       label {
         display: block;
         margin-bottom: 5px;
       }
+      
       input, textarea {
         width: 100%;
         padding: 8px;
@@ -81,27 +93,50 @@
         border: 1px solid #444;
         color: white;
         margin-bottom: 15px;
+        -webkit-appearance: none;
       }
+      
       textarea {
         height: 100px;
       }
+      
       button {
         background: white;
         color: black;
         border: none;
         padding: 10px 15px;
         cursor: pointer;
-        display: block;
+        width: auto;
         margin: 0 auto;
+        display: block;
+        -webkit-appearance: none;
       }
+      
       footer {
         text-align: center;
         padding: 20px 0;
         border-top: 1px solid #333;
         margin-top: 40px;
       }
+      
       a {
         color: white;
+      }
+      
+      #form-status {
+        text-align: center;
+        margin-top: 10px;
+      }
+      
+      @media screen and (max-width: 480px) {
+        form {
+          padding: 0;
+          width: 100%;
+        }
+        
+        .container {
+          padding: 0 15px;
+        }
       }
     </style>
   </head>
