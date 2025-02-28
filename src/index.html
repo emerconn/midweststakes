@@ -65,6 +65,7 @@
     <style>
       * {
         font-family: "Fjalla One", sans-serif;
+        box-sizing: border-box;
       }
       
       body {
@@ -75,6 +76,12 @@
         line-height: 1.6;
         color: white;
         background: black;
+      }
+      
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 20px;
       }
       
       header {
@@ -88,7 +95,8 @@
       }
       
       form {
-        margin: 20px 0;
+        margin: 20px auto;
+        max-width: 600px;
       }
       
       label {
@@ -121,6 +129,7 @@
         text-align: center;
         padding: 20px 0;
         border-top: 1px solid #333;
+        margin-top: 40px;
       }
       
       a {
@@ -129,27 +138,29 @@
     </style>
   </head>
   <body>
-    <header>
-      <h1>MIDWEST STAKES</h1>
-      <p>The best cottonwood stakes, made in the Midwest USA.</p>
-    </header>
-    
-    <form id="stakeContactForm">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required>
+    <div class="container">
+      <header>
+        <h1>MIDWEST STAKES</h1>
+        <p>The best cottonwood stakes, made in the Midwest USA.</p>
+      </header>
       
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
+      <form id="stakeContactForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+        
+        <button type="submit">Send Message</button>
+        <p id="form-status"></p>
+      </form>
       
-      <label for="message">Message</label>
-      <textarea id="message" name="message" required></textarea>
-      
-      <button type="submit">Send Message</button>
-      <p id="form-status"></p>
-    </form>
-    
-    <footer>
-      <p><a href="mailto:contact@midweststakes.com">contact@midweststakes.com</a></p>
-    </footer>
+      <footer>
+        <p><a href="mailto:contact@midweststakes.com">contact@midweststakes.com</a></p>
+      </footer>
+    </div>
   </body>
 </html>
